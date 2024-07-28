@@ -208,7 +208,7 @@ public class SteamEngineBlockEntity extends SmartBlockEntity implements IHaveGog
 		if (sourceBE != null) {
 			FluidTankBlockEntity controller = sourceBE.getControllerBE();
 			if (controller != null && controller.boiler != null) {
-				float volume = 3f / Math.max(2, controller.boiler.attachedEngines / 6);
+				float volume = 1f / Math.max(2, controller.boiler.attachedEngines / 6);
 				float pitch = 1.18f - level.random.nextFloat() * .25f;
 				level.playLocalSound(worldPosition.getX(), worldPosition.getY(), worldPosition.getZ(),
 					SoundEvents.CANDLE_EXTINGUISH, SoundSource.BLOCKS, volume, pitch, false);
